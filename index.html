@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Yachaywasi</title>
+<meta name="description" content="Yachaywasi checks economics papers: it reruns the authors' code, checks the maths, and lets AI models give labelled opinions on a blinded copy.">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101418" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="./"><img src="mark-96.png" width="30" height="30" alt="">Yachaywasi</a>
+    <nav aria-label="Sections">
+      <a href="#checks">Checks</a>
+      <a href="#example">Example</a>
+      <a href="#research">Research</a>
+      <a href="#status">Status</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero wrap">
+    <img class="hero-mark" src="icon-192.png" width="96" height="96" alt="">
+    <h1>Yachaywasi</h1>
+    <p class="meaning"><span lang="qu">yachay wasi</span>, Quechua for house of knowledge</p>
+    <p class="lede">Papers get checked before they get judged. Yachaywasi reruns the authors' code, checks the maths, and lets AI models read a blinded copy and say what they think.</p>
+  </section>
+
+  <section id="checks" class="wrap block" aria-labelledby="checks-h">
+    <h2 id="checks-h">Three checks, one report</h2>
+    <ol class="checks">
+      <li>
+        <p class="label">Code</p>
+        <h3>The numbers come out again</h3>
+        <p>Give it a paper and its replication package. It reruns the code in a sealed sandbox and compares every number it regenerates with the numbers the authors shipped, then looks for those numbers in the paper itself.</p>
+      </li>
+      <li>
+        <p class="label">Maths</p>
+        <h3>The claims are stated and tried</h3>
+        <p>It finds the propositions and theorems, writes each one for a computer algebra system and, where it can, for a machine checked proof in Lean. A claim it cannot state is marked as such. Nothing is guessed.</p>
+      </li>
+      <li>
+        <p class="label">Opinion</p>
+        <h3>Referees without the names</h3>
+        <p>Free AI models read a copy with authors, affiliations and links removed, and score importance, novelty and method. Their answers are shown as opinion. They are never shown as a pass, a fail or a forecast.</p>
+      </li>
+    </ol>
+    <p class="claim">Accuracy is claimed for the code rerun and the maths check, and for nothing else.</p>
+  </section>
+
+  <section id="example" class="wrap block" aria-labelledby="example-h">
+    <h2 id="example-h">One paper, start to finish</h2>
+    <p class="intro"><cite>Measuring Markets for Network Goods</cite>, with its public R replication package.</p>
+    <dl class="report">
+      <div>
+        <dt>Code</dt>
+        <dd><strong>Reproduced.</strong> All four modules ran in 90 seconds. 492 regenerated numbers matched the authors' outputs, with no mismatches.</dd>
+      </div>
+      <div>
+        <dt>Maths</dt>
+        <dd><strong>No verdict.</strong> The paper has one formal proposition, and the small model used could not state it, so nothing was proved either way.</dd>
+      </div>
+      <div>
+        <dt>Opinion</dt>
+        <dd><strong>Two open models</strong> gave their reading. Shown as opinion only; this paper is already published, so it is no test of them.</dd>
+      </div>
+    </dl>
+    <p class="fine">"Reproduced" means the package regenerates its own outputs exactly and those numbers appear in the paper. It says nothing about whether the ideas are right. People judge the ideas.</p>
+  </section>
+
+  <section id="research" class="wrap block" aria-labelledby="research-h">
+    <h2 id="research-h">Can a blind read tell good work from good names?</h2>
+    <p>Behind the tool sits a research question. If a model reads thousands of economics working papers with every name and affiliation removed, can it tell which ones will reach a top journal, and does it see anything the authors' reputations do not already show?</p>
+    <p>A paper on that is in progress. Its results will appear here once it is out.</p>
+  </section>
+
+  <section id="status" class="wrap block" aria-labelledby="status-h">
+    <h2 id="status-h">Where it stands</h2>
+    <p>Yachaywasi runs privately for now. An invite only pilot comes next. There is no public demo yet, and no money is taken.</p>
+    <p>To hear when the pilot opens, get in touch through <a href="https://rackebrandt.pe/">rackebrandt.pe</a>.</p>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>A project by <a href="https://rackebrandt.pe/">Pedro F. Rackebrandt</a>. Not affiliated with the NBER.</p>
+</footer>
+</body>
+</html>
